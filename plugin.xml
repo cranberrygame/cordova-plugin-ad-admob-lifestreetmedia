@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.cranberrygame.cordova.plugin.ad.admob.lifestreetmedia"
+    version="1.0.0">
+	
+    <name>Cordova Admob-LifeStreetMedia Mediation Plugin</name>
+    <description>Cordova Admob-LifeStreetMedia Mediation Plugin</description>
+    <author>Sang Ki Kwon (Cranberrygame)</author>		
+    <license>MIT</license>
+    <keywords>cordova,plugin,ad,admob,monetisation,lifestreetmedia,mediation</keywords>
+    <repo>https://github.com/cranberrygame/cordova-plugin-ad-admob</repo>
+    <issue>https://github.com/cranberrygame/cordova-plugin-ad-admob/issues</issue> 	
+	<engines>
+	    <engine name="cordova" version=">=3.0.0" />
+	</engines>
+	
+    <platform name="android">
+		<source-file src="src/android/lsmsdkadmobmediationadapter.jar" target-dir="libs" />
+		
+        <!-- dependency -->
+<!--
+Multiple dex files define Lcom/lifestreet/android/ad/ConversionTrackerReferrer;:
+[response]        [dx] UNEXPECTED TOP-LEVEL EXCEPTION:
+[response]        [dx] com.android.dex.DexException: Multiple dex files define L
+com/lifestreet/android/ad/ConversionTrackerReferrer;
+[response]        [dx]  at com.android.dx.merge.DexMerger.readSortableTypes(DexM
+erger.java:596)
+[response]        [dx]  at com.android.dx.merge.DexMerger.getSortedTypes(DexMerg
+er.java:554)
+[response]        [dx]  at com.android.dx.merge.DexMerger.mergeClassDefs(DexMerg
+er.java:535)
+[response]        [dx]  at com.android.dx.merge.DexMerger.mergeDexes(DexMerger.j
+ava:171)
+[response]        [dx]  at com.android.dx.merge.DexMerger.merge(DexMerger.java:1
+89)
+[response]        [dx]  at com.android.dx.command.dexer.Main.mergeLibraryDexBuff
+ers(Main.java:454)Merged dex A (242 defs/423.7KiB) with dex B (1 defs/0.4KiB). R
+esult is 243 defs/543.5KiB. Took 0.0s
+[response]        [dx]  at com.android.dx.command.dexer.Main.runMonoDex(Main.jav
+a:303)
+[response]        [dx]  at com.android.dx.command.dexer.Main.run(Main.java:246)
+[response]        [dx]
+[response]        [dx]  at com.android.dx.command.dexer.Main.main(Main.java:215)
+
+[response]        [dx] Merged dex A (243 defs/543.5KiB) with dex B (183 defs/294
+.4KiB). Result is 426 defs/1092.5KiB. Took 0.1s
+[response]        [dx]  at com.android.dx.command.Main.main(Main.java:106)
+[response]        [dx]
+		
+		<source-file src="src/android/lsmsdk.jar" target-dir="libs" />
+		
+-->		
+		<dependency id="android.support.v4@1.0.0" />		
+    </platform>
+		
+    <platform name="ios">
+		<source-file src="src/ios/AdMobMediationAdapter-1.12.0.a" framework="true" />
+		
+		<!-- dependency -->
+<!--
+ includedinmediation:
+ duplicate symbol _OBJC_METACLASS_$_LSMMRAIDNativeStorePictureEvent in:
+ /Volumes/SHARE/cordova_test/admobtest/platforms/ios/admobtest/Plugins/com.cranberrygame.cordova.plugin.ad.admob.lifestreetmedia/AdMobMediationAdapter-1.12.0.a(LSMMRAIDNativeStorePictureEvent.o)
+ /Volumes/SHARE/cordova_test/admobtest/platforms/ios/admobtest/Plugins/com.cranberrygame.cordova.plugin.ad.admob.lifestreetmedia/libLSMSDK.a(LSMMRAIDNativeStorePictureEvent.o)
+ ld: 324 duplicate symbols for architecture x86_64
+ clang: error: linker command failed with exit code 1 (use -v to see invocation)
+ 
+		<source-file src="src/ios/LSMSDK/libLSMSDK.a" framework="true" />
+		<header-file src="src/ios/LSMSDK/LSMAdapterDelegate.h" />
+		<header-file src="src/ios/LSMSDK/LSMBaseAdapter.h" />
+		<header-file src="src/ios/LSMSDK/LSMSlot.h" />
+		<header-file src="src/ios/LSMSDK/LSMSlotDelegate.h" />
+		<header-file src="src/ios/LSMSDK/LSMSlotInterstitial.h" />
+		<header-file src="src/ios/LSMSDK/LSMSlotView.h" />
+		<header-file src="src/ios/LSMSDK/LSMSlotViewDelegate.h" />
+-->
+		<header-file src="src/ios/TouchJSON/CDataScanner.h" />
+		<source-file src="src/ios/TouchJSON/CDataScanner.m" />
+		<header-file src="src/ios/TouchJSON/Experimental/CFilteringJSONSerializer.h" />
+		<source-file src="src/ios/TouchJSON/Experimental/CFilteringJSONSerializer.m" />
+		<header-file src="src/ios/TouchJSON/Experimental/CJSONSerialization.h" />
+		<source-file src="src/ios/TouchJSON/Experimental/CJSONSerialization.m" />
+		<header-file src="src/ios/TouchJSON/Experimental/CJSONSerializedData.h" />
+		<source-file src="src/ios/TouchJSON/Experimental/CJSONSerializedData.m" />
+		<header-file src="src/ios/TouchJSON/Extensions/CDataScanner_Extensions.h" />
+		<source-file src="src/ios/TouchJSON/Extensions/CDataScanner_Extensions.m" />
+		<header-file src="src/ios/TouchJSON/Extensions/NSDictionary_JSONExtensions.h" />
+		<source-file src="src/ios/TouchJSON/Extensions/NSDictionary_JSONExtensions.m" />
+		<header-file src="src/ios/TouchJSON/JSON/CJSONDeserializer.h" />
+		<source-file src="src/ios/TouchJSON/JSON/CJSONDeserializer.m" />
+		<header-file src="src/ios/TouchJSON/JSON/CJSONScanner.h" />
+		<source-file src="src/ios/TouchJSON/JSON/CJSONScanner.m" />
+		<header-file src="src/ios/TouchJSON/JSON/CJSONSerializer.h" />
+		<source-file src="src/ios/TouchJSON/JSON/CJSONSerializer.m" />
+		<header-file src="src/ios/TouchJSON/JSON/JSONRepresentation.h" />
+        <framework src="MediaPlayer.framework" />
+
+    </platform>
+
+	<!-- dependency -->
+	<dependency id="com.cranberrygame.cordova.plugin.ad.admob" />
+</plugin>
