@@ -1,0 +1,40 @@
+{
+  "name": "cordova-plugin-ad-admob-lifestreetmedia",
+  "version": "1.0.24",
+  "description": "Cordova Admob-LifeStreetMedia Mediation Plugin",
+  "cordova": {
+    "id": "cordova-plugin-ad-admob-lifestreetmedia",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cranberrygame/cordova-plugin-ad-admob-lifestreetmedia.git"
+  },
+  "keywords": [
+    "cordova",
+    "plugin",
+    "ad",
+    "admob",
+    "monetisation",
+    "lifestreetmedia",
+    "mediation",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "cranberrygame",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cranberrygame/cordova-plugin-ad-admob-lifestreetmedia/issues"
+  },
+  "homepage": "https://github.com/cranberrygame/cordova-plugin-ad-admob-lifestreetmedia#readme"
+}
