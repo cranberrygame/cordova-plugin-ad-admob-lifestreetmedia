@@ -24,7 +24,7 @@ OBJC_EXTERN NSString *const kLSMMRAIDVersion;
 @property (nonatomic, readonly) LSMSlotView *view;
 
 //! Set this delegate if you wish to be informed about certain events such as:
-//! an ad has been received, an error occured and so on. Also, you can improve
+//! an ad has been received, an error occurred and so on. Also, you can improve
 //! quality of the ads if you set targeting information to this delegate.
 @property (nonatomic, unsafe_unretained) id<LSMSlotDelegate> delegate;
 
